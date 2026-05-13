@@ -28,7 +28,8 @@ jobs:
     # 4. React 프로젝트 빌드 (HTML/CSS/JS 변환)
     - name: Build
       run: npm run build
-      # 설명: 이 명령어가 실행되면 './build' 폴더에 배포용 파일들이 생성됩니다.
+      # 설명: Vite 는 './dist' 폴더에 배포용 파일들을 생성합니다.
+      # (Create React App 은 './build' 였지만 본 프로젝트는 Vite 사용)
 
     # 5. AWS 자격 증명 설정 (Academy용 Session Token 포함)
     - name: Configure AWS credentials
@@ -42,5 +43,5 @@ jobs:
     # 6. S3로 배포 (빌드된 폴더만 업로드)
     - name: Deploy to S3
       run: |
-        # ./build 폴더의 내용을 S3로 동기화합니다.
-        aws s3 sync ./build s3://mybucket-20263584
+        # ./dist 폴더의 내용을 S3로 동기화합니다. (--delete: S3 의 옛 파일 제거)
+        aws s3 sync ./dist s3://mybucket-20263584 --delete
