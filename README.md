@@ -43,7 +43,7 @@ React + Vite 기반의 스와이프 벽돌깨기 웹 게임입니다. 게임 오
 │  ├─ storage.js         # localStorage 랭킹 유틸
 │  └─ styles.css         # 전역 스타일
 └─ .github/workflows/
-   └─ ci.yml             # GitHub Actions 워크플로
+   └─ deploy.yml             # GitHub Actions 워크플로
 ```
 
 ## 4. 로컬 실행 방법
@@ -57,7 +57,7 @@ npm run preview  # 빌드 결과 미리보기
 
 ## 5. GitHub Actions CI/CD 환경
 
-- 워크플로 파일: `.github/workflows/ci.yml`
+- 워크플로 파일: `.github/workflows/deploy.yml`
 - 트리거: `main` 브랜치로의 `push` 및 `pull_request`
 - 단계:
   1. 저장소 체크아웃
@@ -65,6 +65,9 @@ npm run preview  # 빌드 결과 미리보기
   3. 빌드 검증 (`npm run build`)
   4. 빌드 산출물(`dist/`) 아티팩트 업로드
 
+   CI/CD 환경 구축 실습 시연 영상 링크: https://youtu.be/nUUmJ2R9pFA
+  AWS url : http://mybucket-20263584.s3-website-us-east-1.amazonaws.com/
+  
 ### Secrets 등록 (AWS Academy 사용 시)
 
 GitHub 저장소 → **Settings → Secrets and variables → Actions → New repository secret** 에서 등록합니다.
@@ -85,13 +88,13 @@ GitHub 저장소 → **Settings → Secrets and variables → Actions → New re
 - 출력 디렉토리: `dist`
 
 ### 배포 URL (세션 4시간만 유효)
-
-- 🌐 **AWS Amplify URL**: `여기에 Amplify 배포 URL 을 붙여넣으세요`
+- 🌐 **CI/CD URL**: http://mybucket-20263584.s3-website-us-east-1.amazonaws.com/
+- 🌐 **AWS Amplify URL**: https://main.d3771mk5m08r6l.amplifyapp.com/
 
 ## 7. 시연 영상 (YouTube)
 
-- 🎬 **GitHub Actions CI/CD 구축 시연**: `여기에 YouTube 링크`
-- 🎬 **AWS Amplify 호스팅 시연**: `여기에 YouTube 링크`
+- 🎬 **GitHub Actions CI/CD 구축 시연**: https://youtu.be/nUUmJ2R9pFA
+- 🎬 **AWS Amplify 호스팅 시연**: https://youtu.be/J8nkTG-k2Fk
 
 ## 8. 게임 룰 요약
 
