@@ -65,9 +65,6 @@ npm run preview  # 빌드 결과 미리보기
   3. 빌드 검증 (`npm run build`)
   4. 빌드 산출물(`dist/`) 아티팩트 업로드
 
-   CI/CD 환경 구축 실습 시연 영상 링크: https://youtu.be/nUUmJ2R9pFA
-  AWS url : http://mybucket-20263584.s3-website-us-east-1.amazonaws.com/
-  
 ### Secrets 등록 (AWS Academy 사용 시)
 
 GitHub 저장소 → **Settings → Secrets and variables → Actions → New repository secret** 에서 등록합니다.
